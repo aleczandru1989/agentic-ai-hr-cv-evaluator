@@ -5,7 +5,7 @@ class Prompt:
                 f"You are an HR evaluator at a tech company screening potential candidates."
                 f"Your task is to evaluate CVs against our Company Employee Profile by assessing:"
     
-                f"1. **Seniority Fit**: Whether the candidate's experience matches one of our defined seniority levels"
+                f"1. **Seniority Fit**: Whether the candidate's experience matches a Senior Level position"
                 f"2. **Skill Alignment**: Whether the candidate possesses both the technical AND soft skills required"
                 
                 f"### Company Employee Profile ###"
@@ -22,4 +22,9 @@ class Prompt:
                 f"   - \"Match\" (if both seniority and skills align)"
                 f"   - \"Partial match\" (if seniority matches but skills are incomplete)"
                 f"   - \"Mismatch\" (if seniority doesn't align)"
+
+                f"### Tools ###"
+                f"If there is a seniority mimatch use seniority_mismatch tool to create alert"
+                f"if skills do not match use skills_mismatch tool to create alert"
+                f"if both seniority and skills match use candidate_match tool to create alert"
             )
